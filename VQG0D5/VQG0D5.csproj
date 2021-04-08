@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EE90523-9A3C-42EB-B831-B83955082A6F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>VQG0D5</RootNamespace>
+    <AssemblyName>VQG0D5</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\hierarchy\Activity\_enums.cs" />
+    <Compile Include="src\hierarchy\Activity\_delegates.cs" />
+    <Compile Include="src\api\ScheduleManager\ScheduleManagerPrivate.cs" />
+    <Compile Include="src\hierarchy\Activity\BaseActivity.cs" />
+    <Compile Include="src\hierarchy\Activity\Interfaces\IAutomaticSchedule.cs" />
+    <Compile Include="src\hierarchy\Activity\RegularActivity\DailyActivity.cs" />
+    <Compile Include="src\hierarchy\Activity\OccasionalActivity.cs" />
+    <Compile Include="src\hierarchy\Activity\RegularActivity.cs" />
+    <Compile Include="src\hierarchy\Activity\RegularActivity\WeeklyActivity.cs" />
+    <Compile Include="src\hierarchy\Activity\RegularActivity\YearlyActivity.cs" />
+    <Compile Include="src\lib\Exceptions\AlreadyCompletedException.cs" />
+    <Compile Include="src\lib\Exceptions\CustomBaseException.cs" />
+    <Compile Include="src\lib\Exceptions\AlreadyExistsException.cs" />
+    <Compile Include="src\lib\Exceptions\NotFoundException.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\lib\Exceptions\ExceptionHandler.cs" />
+    <Compile Include="src\lib\Utils\DataStructures\LinkedListPrivate.cs" />
+    <Compile Include="src\lib\Utils\DataStructures\LinkedListPublic.cs" />
+    <Compile Include="src\api\ScheduleManager\ScheduleManagerPublic.cs" />
+    <Compile Include="src\lib\Utils\Reflection\Conversion.cs" />
+    <Compile Include="src\lib\Utils\Extensions\ArrayExtensions.cs" />
+    <Compile Include="src\lib\Utils\Reflection\Instance.cs" />
+    <Compile Include="src\lib\Utils\FileSystem\Read.cs" />
+    <Compile Include="src\lib\Utils\Extensions\TableParser.cs" />
+    <Compile Include="src\lib\Utils\FileSystem\Write.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include="App.config" />
+    <None Include="config.json" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
