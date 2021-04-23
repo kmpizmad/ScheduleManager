@@ -44,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\EventHandler.cs" />
+    <Compile Include="src\ClassBuilder.cs" />
+    <Compile Include="src\ProcessPublic.cs" />
+    <Compile Include="src\ProcessPrivate.cs" />
+    <Compile Include="src\api\Displayer\Displayer.cs" />
     <Compile Include="src\hierarchy\Activity\_enums.cs" />
     <Compile Include="src\hierarchy\Activity\_delegates.cs" />
     <Compile Include="src\api\ScheduleManager\ScheduleManagerPrivate.cs" />
@@ -73,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
+    <None Include="activities.csv" />
     <None Include="App.config" />
     <None Include="config.json" />
     <None Include="README.md" />

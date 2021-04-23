@@ -1,0 +1,15 @@
+1;;Activity 1;30;Medium;0
+2;;Activity 2;60;High;0
+3;2021.06.02 13:30;Activity 3;30;Medium;7
+4;2021.06.01 19:00;Activity 4;30;Low;1
+5;2021.06.01 8:30;Activity 5;60;High;7
+6;2021.12.17 14:45;Activity 6;30;Low;365
+7;2021.12.24 14:45;Activity 7;1440;High;365
+8;2021.04.01 8:00;Activity 8;1440;Low;365
+9;;Activity 9;15;Low;0
+10;;Activity 10;90;Low;0
+11;;Activity 11;30;Low;0
+12;2021.06.01 13:00;Activity 12;60;High;7
+13;2021.06.01 14:00;Activity 13;120;High;1
+14;;Activity 14;30;Medium;0
+15;;Activity 15;30;Medium;0

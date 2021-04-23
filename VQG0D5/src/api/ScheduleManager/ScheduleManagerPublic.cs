@@ -23,15 +23,23 @@ namespace VQG0D5.ScheduleManager {
     /// <summary>
     /// Removes already existing schedules from activities list
     /// </summary>
-    public void AfterInit() {
-      if (this.Schedule.Head == null) {
+    public void Init(string path) {
+      ClassBuilder.Init(path, instance => {
+        this.__activities.Add(
+          instance as BaseActivity,
+          (instance as BaseActivity).Priority,
+          (instance as BaseActivity).Id
+        );
+      });
+
+      if (this.__schedule.Head == null) {
         return;
       }
 
       LinkedList<BaseActivity, Priority, int> schedule = new LinkedList<BaseActivity, Priority, int>(false);
-      this.Schedule.ForEach(activity => schedule.Add(activity, activity.Priority, activity.Id));
+      this.__schedule.ForEach(activity => schedule.Add(activity, activity.Priority, activity.Id));
 
-      this.__activities = schedule.Difference(this.Activities);
+      this.__activities = schedule.Difference(this.__activities);
     }
 
     /// <summary>

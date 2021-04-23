@@ -5,13 +5,14 @@
 A `config.json` fájlban meg kell adni egy intervallumot, 
 ami között beoszthat egyszeri eseményeket a rendszer.
 
-| Paraméter    | Típus      | Tulajdonságok    |
-|--------------|------------|------------------|
-| threshold    | objektum   | minimum, maximum |
-| minimum      | egész szám | -                |
-| maximum      | egész szám | -                |
+| Paraméter    | Típus      | Tulajdonságok    | Megjegyzés              |
+|--------------|------------|------------------|-------------------------|
+| outDir       | string     | -                | Generált beosztások mappája |
+| threshold    | objektum   | minimum, maximum | Intervallum objektuma   |
+| minimum      | egész szám | -                | Intervallum kezdete     |
+| maximum      | egész szám | -                | Intervallum vége        |
 
-A `Debug` mappában található egy `activities.csv` fájl,
+A projekt `root` mappájában található egy `activities.csv` fájl,
 amiben teszt adatok vannak.
 	
 - Egy adott eseménynek 6 paramétere van minden esetben.
@@ -31,8 +32,8 @@ Ezeknek a sorrendje:
 
 ## Amit tudni kell..
 
-A rendszer nyílvántart minden olyan napot amit legenerált. 
-Ez azt jelenti, hogy a fentebb említett `Debug` mappába tárolja
+A rendszer nyílvántart minden olyan napot amit generált. 
+Ez azt jelenti, hogy a fentebb említett `outDir` mappába tárolja
 el a napi beosztásokat, így minden alkalommal amikor fut a 
 program, elõször beolvassa a már elkészített beosztásokat és 
 azok alapján készíti el az újabbakat.
